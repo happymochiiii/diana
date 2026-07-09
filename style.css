@@ -375,7 +375,7 @@ h1 {
 h2 {
   font-size: 48px;
   line-height: 1;
-  margin-top: 6px;
+  margin-top: 0px;
   margin-bottom: 18px;
 }
 
@@ -387,7 +387,7 @@ h2 {
 
 .cake-wrap {
   margin-top: 44px;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
 }
 
   .cake-img {
