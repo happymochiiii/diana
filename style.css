@@ -394,9 +394,10 @@ canvas {
     width: 200px;
   }
 
-  .candle36 {
-    width: 74px;
-  }
+  .candle36{
+    width:74px;
+    top:-30px;
+}
 
   .flames {
     top: -51px;
