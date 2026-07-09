@@ -423,3 +423,14 @@ canvas {
     margin-top: 20px;
   }
 }
+
+/* FORCE ONE SCREEN ONLY */
+#cakeScreen,
+#giftScreen {
+  display: none;
+}
+
+#cakeScreen.active,
+#giftScreen.active {
+  display: block;
+}
