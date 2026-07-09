@@ -396,11 +396,11 @@ canvas {
 
   .candle36{
     width:74px;
-    top:-40px;
+    top:-38px;
 }
 
   .flames {
-    top: -51px;
+    top: -55px;
     transform: translateX(-50%) scale(0.78);
   }
 
