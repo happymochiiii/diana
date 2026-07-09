@@ -319,11 +319,11 @@ canvas {
 }
 
 .flame-left {
-  left: 28px;
+  left: 22px;
 }
 
 .flame-right {
-  right: 28px;
+  right: 22px;
 }
 
 @keyframes flameDance {
