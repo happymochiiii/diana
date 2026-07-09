@@ -399,8 +399,9 @@ h2 {
   }
 
   .flames {
-    transform: translateX(-50%) scale(0.85);
-  }
+    left: 50%;
+    bottom: 90px;
+}
 
   button {
     padding: 12px 24px;
