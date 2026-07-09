@@ -26,6 +26,11 @@ body {
   width: 100%;
   max-width: 430px;
   min-height: 620px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   padding: 28px 22px 34px;
   text-align: center;
   border-radius: 32px;
@@ -36,7 +41,7 @@ body {
 }
 
 .screen.active {
-  display: block;
+  display: flex;
 }
 
 @keyframes fadeIn {
