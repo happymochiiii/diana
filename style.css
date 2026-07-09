@@ -423,3 +423,11 @@ canvas {
     margin-top: 20px;
   }
 }
+
+.screen {
+  display: none !important;
+}
+
+.screen.active {
+  display: block !important;
+}
