@@ -405,7 +405,7 @@ canvas {
 }
 
   .flames {
-    top: -55px;
+    top: -38px;
     transform: translateX(-50%) scale(0.78);
   }
 
