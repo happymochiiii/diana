@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  
+<meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Diana</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<audio id="birthdaySong" loop>
+  <source src="birthday-song.mp3" type="audio/mpeg">
+</audio>
+
+<div class="app">
+
+  <section id="cakeScreen" class="screen active">
+
+   <h1>Happy Birthday</h1>
+   <h2>Diana</h2>
+
+<p class="small-title">May all your duas come true. ✨</p>
+
+   <div class="cake-wrap">
+
+    <img src="candle36.png"
+         id="cakeCandles"
+         class="candle36">
+
+         <div class="flames" id="flames">
+  <div class="real-flame flame-left"></div>
+  <div class="real-flame flame-right"></div>
+</div>
+
+    <img src="cake.png"
+         class="cake-img">
+
+</div>
+
+
+    <button id="blowBtn">🕯️ Blow the Candle</button>
+    <button id="redeemBtn" class="hidden gold-btn">Redeem Your Gift</button>
+  </section>
+
+  <section id="giftScreen" class="screen">
+  
+  <h1>Gift Voucher</h1>
+
+  <div class="voucher">
+    <p class="voucher-title">Scratch to reveal</p>
+
+    <div class="scratch-card">
+      <div class="code" id="voucherCode">SHOPEE-36-DIANA</div>
+      <canvas id="scratchCanvas"></canvas>
+    </div>
+
+    <button id="copyBtn" class="gold-btn">Copy Code</button>
+    <p id="copyMsg" class="copy-msg hidden">Copied! 🎉</p>
+  </div>
+
+  <div class="voucher">
+    
+    <div class="scratch-card">
+      <div class="code" id="voucherCode2">SHOPEE-36-BESTIE</div>
+      <canvas id="scratchCanvas2"></canvas>
+    </div>
+
+    <button id="copyBtn2" class="gold-btn">Copy Code</button>
+    <p id="copyMsg2" class="copy-msg hidden">Copied! 🎉</p>
+  </div>
+</section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

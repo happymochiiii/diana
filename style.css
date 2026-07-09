@@ -1,0 +1,418 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, serif;
+  background:
+    radial-gradient(circle at top, #ce793a 0%, transparent 35%),
+    linear-gradient(145deg, #480903, #864b12 55%, #2a0502);
+  color: #f4dfaa;
+  overflow-x: hidden;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 28px 18px;
+}
+
+.screen {
+  display: none;
+  width: 100%;
+  max-width: 430px;
+  min-height: 620px;
+  padding: 28px 22px 34px;
+  text-align: center;
+  border-radius: 32px;
+  border: 1px solid rgba(244, 223, 170, 0.25);
+  background: rgba(72, 9, 3, 0.58);
+  box-shadow: 0 25px 70px rgba(0,0,0,0.45);
+  animation: fadeIn 1s ease;
+}
+
+.screen.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.small-title {
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: #e5d1a4;
+  opacity: 0.85;
+
+  margin-top: 5;
+  margin-bottom: 28px;
+}
+
+h1{
+    font-size: 60px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+
+h2{
+    font-size: 68px;
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: -8px;
+    line-height: 0.9;
+}
+
+.cake-wrap{
+    position: relative;
+    display: inline-block;
+    margin-top: 80px;
+}
+
+.candle36{
+    position:absolute;
+    width:95px;
+    left:50%;
+    top:-50px;
+    transform:translateX(-50%);
+    z-index:5;
+    transition:all .6s ease;
+    filter:drop-shadow(0 4px 6px rgba(0,0,0,.35));
+}
+
+.candle36.out{
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+}
+
+
+@keyframes floatCake {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.cake-img{
+    width:240px;
+    display:block;
+}
+
+.candle-number {
+  position: absolute;
+  top: -82px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 54px;
+  font-weight: bold;
+  z-index: 3;
+  color: #fff1c2;
+  text-shadow: 0 0 12px rgba(255, 206, 99, 0.8);
+}
+
+.flame {
+  position: absolute;
+  top: -122px;
+  left: 50%;
+  width: 24px;
+  height: 36px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, #fff7b0 5%, #ffb23d 45%, #ce793a 80%);
+  border-radius: 50% 50% 45% 45%;
+  z-index: 4;
+  box-shadow: 0 0 28px #ffb23d;
+  animation: flicker 0.18s infinite alternate;
+}
+
+@keyframes flicker {
+  from {
+    transform: translateX(-50%) scale(1) rotate(-4deg);
+  }
+  to {
+    transform: translateX(-50%) scale(1.12) rotate(4deg);
+  }
+}
+
+.flame.out {
+  opacity: 0;
+  transform: translateX(-50%) scale(0);
+  transition: 0.5s ease;
+}
+
+.smoke {
+  position: absolute;
+  top: -130px;
+  left: 48%;
+  z-index: 5;
+  font-size: 28px;
+  opacity: 0.75;
+  animation: smokeUp 1.4s ease forwards;
+}
+
+@keyframes smokeUp {
+  from {
+    opacity: 0.8;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+.wish {
+  font-size: 20px;
+  margin: 4px 0 12px;
+  color: #fff1c2;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 14px 30px;
+  margin: 40px auto 0;
+  display: block;
+  font-size: 16px;
+  font-family: Georgia, serif;
+  cursor: pointer;
+  color: #480903;
+  background: #e5d1a4;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+button:hover {
+  transform: scale(1.04);
+}
+
+.gold-btn {
+  background: linear-gradient(135deg, #937a24, #e5d1a4, #ce793a);
+  color: #fff8df;
+}
+
+.hidden {
+  display: none;
+}
+
+.voucher {
+  margin-top: 42px;
+}
+
+.voucher-title {
+  letter-spacing: 2px;
+  opacity: 0.9;
+}
+
+.scratch-card {
+  position: relative;
+  width: 320px;
+  max-width: 100%;
+  height: 145px;
+  margin: 24px auto;
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e5d1a4, #fff1c2);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.45);
+}
+
+.code {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #480903;
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.copy-msg {
+  color: #fff1c2;
+  font-size: 16px;
+}
+
+.cake-candles{
+    position:absolute;
+    top:-15px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:12px;
+    z-index:10;
+}
+
+.num-candle {
+  position: relative;
+}
+
+.num-candle span {
+  font-size: 52px;
+  font-weight: bold;
+  color: #f6d27a;
+  text-shadow:
+    0 0 8px #ffb347,
+    0 3px 0 #7a3106;
+}
+
+.mini-flame {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  width: 14px;
+  height: 24px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, #fff7b0 10%, #ffb23d 45%, #ce793a 80%);
+  border-radius: 50% 50% 45% 45%;
+  box-shadow: 0 0 18px #ffb23d;
+  animation: flicker 0.18s infinite alternate;
+}
+
+.cake-candles.out .mini-flame {
+  opacity: 0;
+  transform: translateX(-50%) scale(0);
+  transition: 0.5s ease;
+}
+
+.flames {
+  position: absolute;
+  top: -49px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 40px;
+  z-index: 30;
+  pointer-events: none;
+}
+
+.real-flame {
+  position: absolute;
+  width: 13px;
+  height: 24px;
+  top: 0;
+  background: radial-gradient(circle, #fff7b0 8%, #ffb23d 45%, #ce793a 85%);
+  border-radius: 50% 50% 45% 45%;
+  box-shadow: 0 0 16px #ffb23d;
+  animation: flameDance 0.18s infinite alternate;
+}
+
+.flame-left {
+  left: 28px;
+}
+
+.flame-right {
+  right: 28px;
+}
+
+@keyframes flameDance {
+  from {
+    transform: scale(1) rotate(-3deg);
+  }
+  to {
+    transform: scale(1.15) rotate(3deg);
+  }
+}
+
+.flames.out {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-10px);
+  transition: 0.45s ease;
+}
+
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+
+@media (max-width: 430px) {
+
+  body {
+    overflow: hidden;
+  }
+
+  .app {
+    min-height: 100vh;
+    padding: 0;
+    align-items: center;
+  }
+
+  .screen {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    padding: 18px 16px;
+    box-shadow: none;
+  }
+
+  h1 {
+    font-size: 42px;
+    line-height: 0.95;
+  }
+
+  h2 {
+    font-size: 54px;
+    line-height: 0.85;
+    margin-top: -4px;
+    margin-bottom: -4px;
+  }
+
+  .small-title {
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin: 2px 0 18px;
+  }
+
+  .cake-wrap {
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+
+  .cake-img {
+    width: 170px;
+  }
+
+  .candle36 {
+    width: 80px;
+  }
+
+  .flames {
+    transform: translateX(-50%) scale(0.85);
+  }
+
+  button {
+    padding: 12px 24px;
+    font-size: 15px;
+    margin: 22px auto 0;
+  }
+
+  .scratch-card {
+    width: 280px;
+    height: 120px;
+  }
+
+  .voucher {
+    margin-top: 22px;
+  }
+}
