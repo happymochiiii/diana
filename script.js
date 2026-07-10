@@ -141,15 +141,18 @@ function setupScratchCard(canvasId) {
   canvas.width = card.offsetWidth;
   canvas.height = card.offsetHeight;
 
-  const img = new Image();
+  // Tutup voucher serta-merta sementara gambar sedang load
+ctx.fillStyle = "#9b4f36";
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+const img = new Image();
 
 img.onload = () => {
-
   ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-  ctx.fillStyle = "rgba(255, 248, 230, 0.25)";
+  // Lapisan translucent lembut
+  ctx.fillStyle = "rgba(255, 248, 230, 0.28)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-
 };
 
 img.src = "floral.jpg";
