@@ -141,13 +141,15 @@ function setupScratchCard(canvasId) {
   canvas.width = card.offsetWidth;
   canvas.height = card.offsetHeight;
 
-  ctx.fillStyle = "#937a24";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  const img = new Image();
 
-  ctx.fillStyle = "#e5d1a4";
-  ctx.font = "22px Georgia";
-  ctx.textAlign = "center";
-  ctx.fillText("SCRATCH HERE", canvas.width / 2, canvas.height / 2 + 8);
+img.onload = () => {
+
+  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+};
+
+img.src = "floral.jpg";
 
   let isDrawing = false;
 
