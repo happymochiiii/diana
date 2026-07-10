@@ -462,3 +462,19 @@ canvas {
 #giftScreen.active {
   display: block;
 }
+
+.voucher-amount{
+    font-size:32px;
+}
+
+.voucher-name{
+    font-size:16px;
+}
+
+.voucher-label{
+    font-size:9px;
+}
+
+.voucher-code{
+    font-size:14px;
+}
