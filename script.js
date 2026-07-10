@@ -147,6 +147,9 @@ img.onload = () => {
 
   ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
+  ctx.fillStyle = "rgba(255, 248, 230, 0.22)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
 };
 
 img.src = "floral.jpg";
