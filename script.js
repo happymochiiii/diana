@@ -147,7 +147,7 @@ img.onload = () => {
 
   ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-  ctx.fillStyle = "rgba(255, 248, 230, 0.22)";
+  ctx.fillStyle = "rgba(255, 248, 230, 0.25)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 };
