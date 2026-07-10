@@ -230,16 +230,44 @@ button:hover {
   box-shadow: 0 20px 45px rgba(0,0,0,0.45);
 }
 
-.code {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #480903;
-  font-size: 23px;
-  font-weight: bold;
-  letter-spacing: 1px;
+.code{
+  position:absolute;
+  inset:0;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  color:#480903;
+}
+
+.voucher-amount{
+  font-size:42px;
+  font-weight:700;
+  line-height:1;
+  color:#8a4d0d;
+}
+
+.voucher-name{
+  font-size:20px;
+  margin-top:6px;
+  font-weight:500;
+}
+
+.voucher-label{
+  font-size:11px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  opacity:.65;
+  margin-top:18px;
+}
+
+.voucher-code{
+  margin-top:6px;
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:1px;
 }
 
 canvas {
